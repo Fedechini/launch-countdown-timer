@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --super-dark-blue: hsl(234, 17%, 12%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.4rem;
+  background-image: url(./images/bg-stars.svg);
+  background-color: var(--very-dark-blue);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* CONTENT */
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-top: 14rem;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+.countdown {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.countdown__el {
+  text-align: center;
+  min-width: 15rem;
+}
+
+.time {
+  padding: 3rem 0;
+  border-radius: 1.5rem;
+  box-shadow: 0.5rem 1rem 1rem var(--super-dark-blue);
+  background-color: var(--dark-desaturated-blue);
+  color: var(--soft-red);
+  font-size: 5rem;
+}
+
+.time__desc {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+  color: var(--grayish-blue);
+}
+
+.socials {
+  height: 33vh;
+  margin-top: auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-image: url(./images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--dark-desaturated-blue);
+  color: var(--white);
+  width: 100vw;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.footer-link,
+.footer-link:link,
+.footer-link:visited {
+  color: var(--soft-red);
+  font-weight: 700;
+}

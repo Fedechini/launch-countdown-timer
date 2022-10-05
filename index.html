@@ -14,7 +14,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./style.css">
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js" defer></script>
     <title>Launch countdown timer</title>
   </head>
 
@@ -27,31 +27,34 @@
       <div class="countdown">
         <div class="countdown__el">
           <div class="time">
-            <h2>08</h2>
+            <h2 id="days">08</h2>
           </div>
           <div class="time__desc">
             <p>days</p>
           </div>
         </div>
+
         <div class="countdown__el">
           <div class="time">
-            <h2>23</h2>
+            <h2 id="hours">23</h2>
           </div>
           <div class="time__desc">
             <p>hours</p>
           </div>
         </div>
+
         <div class="countdown__el">
           <div class="time">
-            <h2>55</h2>
+            <h2 id="minutes">55</h2>
           </div>
           <div class="time__desc">
             <p>minutes</p>
           </div>
         </div>
+
         <div class="countdown__el">
           <div class="time">
-            <h2>41</h2>
+            <h2 id="seconds">41</h2>
           </div>
           <div class="time__desc">
             <p>seconds</p>

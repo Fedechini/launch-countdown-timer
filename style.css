@@ -90,6 +90,11 @@ body {
   background-size: cover;
 }
 
+.social__icon:hover {
+  filter: invert(50%) sepia(99%) saturate(1435%) hue-rotate(310deg)
+    brightness(100%) contrast(98%);
+}
+
 /* FOOTER */
 .footer {
   position: fixed;
@@ -107,4 +112,45 @@ body {
 .footer-link:visited {
   color: var(--soft-red);
   font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+
+  .time {
+    font-size: 4rem;
+  }
+
+  .countdown__el {
+    min-width: 12.5rem;
+  }
+
+  .countdown {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    padding: 0 4rem;
+  }
+
+  .time {
+    font-size: 3rem;
+    padding: 2rem 0;
+  }
+
+  .countdown {
+    gap: 1rem;
+  }
+
+  .countdown__el {
+    min-width: 10rem;
+  }
 }

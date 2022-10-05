@@ -7,7 +7,7 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 
-const dateToLaunch = new Date("Dec 27, 2022 22:22:22").getTime();
+const dateToLaunch = new Date("Dec 27, 2023 22:22:22").getTime();
 
 // countdown
 const countdown = setInterval(() => {

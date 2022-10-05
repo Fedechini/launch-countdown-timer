@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://fedechini.github.io/launch-countdown-timer/)
+- Live Site URL: [Countdown](https://fedechini.github.io/launch-countdown-timer/)
 
 ## Author
 

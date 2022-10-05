@@ -7,7 +7,7 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 
-const dateToLaunch = new Date("Dec 27, 2023 22:22:22").getTime();
+let dateToLaunch = new Date(Date.now() + 12096e5);
 
 // countdown
 const countdown = setInterval(() => {
@@ -23,6 +23,6 @@ const countdown = setInterval(() => {
   seconds.textContent = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   if (timeLeft < 0) {
-    header.innerHTML = "countdown is over!";
+    header.textContent = "We launching now!";
   }
 }, 1000);

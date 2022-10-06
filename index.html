@@ -2,17 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./index.js" defer></script>
+    <meta name="viewport" content="width=device-width" />
     <title>Launch countdown timer</title>
+
+    <link rel="stylesheet" href="./flip/flip.min.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -21,40 +15,22 @@
         <h1>we're launching soon</h1>
       </header>
 
-      <div class="countdown">
-        <div class="countdown__el">
-          <div class="time">
-            <h2 id="days">⏳</h2>
-          </div>
-          <div class="time__desc">
-            <p>days</p>
-          </div>
-        </div>
+      <div class="tick" data-did-init="handleTickInit">
+        <div
+          data-repeat="true"
+          data-layout="horizontal center fit"
+          data-transform="preset(d, h, m, s) -> delay"
+        >
+          <div class="tick-group">
+            <div
+              data-key="value"
+              data-repeat="true"
+              data-transform="pad(00) -> split -> delay"
+            >
+              <span data-view="flip"></span>
+            </div>
 
-        <div class="countdown__el">
-          <div class="time">
-            <h2 id="hours">⏳</h2>
-          </div>
-          <div class="time__desc">
-            <p>hours</p>
-          </div>
-        </div>
-
-        <div class="countdown__el">
-          <div class="time">
-            <h2 id="minutes">⏳</h2>
-          </div>
-          <div class="time__desc">
-            <p>minutes</p>
-          </div>
-        </div>
-
-        <div class="countdown__el">
-          <div class="time">
-            <h2 id="seconds">⏳</h2>
-          </div>
-          <div class="time__desc">
-            <p>seconds</p>
+            <span data-key="label" data-view="text" class="tick-label"></span>
           </div>
         </div>
       </div>
@@ -62,17 +38,17 @@
       <ul class="socials">
         <li class="social__icon">
           <a href="#"
-            ><img src="./images/icon-facebook.svg" alt="facebook"
+            ><img src="../images/icon-facebook.svg" alt="facebook"
           /></a>
         </li>
         <li class="social__icon">
           <a href="#"
-            ><img src="./images/icon-pinterest.svg" alt="pinterest"
+            ><img src="../images/icon-pinterest.svg" alt="pinterest"
           /></a>
         </li>
         <li class="social__icon">
           <a href="#"
-            ><img src="./images/icon-instagram.svg" alt="instagram"
+            ><img src="../images/icon-instagram.svg" alt="instagram"
           /></a>
         </li>
       </ul>
@@ -92,6 +68,17 @@
           >Federico Bertoni</a
         >.
       </footer>
+
+      <script>
+        function handleTickInit(tick) {
+          var date = new Date(Date.now() + 12096e5);
+
+          Tick.count.down(date).onupdate = function (value) {
+            tick.value = value;
+          };
+        }
+      </script>
+      <script src="./flip/flip.min.js"></script>
     </main>
   </body>
 </html>

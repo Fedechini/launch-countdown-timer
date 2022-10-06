@@ -27,13 +27,38 @@ html {
 body {
   font-family: "Red Hat Text", sans-serif;
   font-size: 1.4rem;
-  background-image: url(./images/bg-stars.svg);
+  background-image: url(../images/bg-stars.svg);
   background-color: var(--very-dark-blue);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* CONTENT */
+
+.tick {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.tick-label {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+.tick-group {
+  font-size: 7.5rem;
+  text-align: center;
+}
+
+.tick-flip-panel {
+  color: var(--soft-red);
+  background-color: var(--dark-desaturated-blue);
+}
+
 .main {
   height: 100vh;
   display: flex;
@@ -48,35 +73,6 @@ body {
   letter-spacing: 0.5rem;
 }
 
-.countdown {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
-
-.countdown__el {
-  text-align: center;
-  min-width: 15rem;
-}
-
-.time {
-  padding: 3rem 0;
-  border-radius: 1.5rem;
-  box-shadow: 0.5rem 1rem 1rem var(--super-dark-blue);
-  background-color: var(--dark-desaturated-blue);
-  color: var(--soft-red);
-  font-size: 5rem;
-}
-
-.time__desc {
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  margin-top: 2rem;
-  color: var(--grayish-blue);
-}
-
 .socials {
   height: 33vh;
   margin-top: auto;
@@ -85,7 +81,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  background-image: url(./images/pattern-hills.svg);
+  background-image: url(../images/pattern-hills.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -119,16 +115,8 @@ body {
     font-size: 55%;
   }
 
-  .time {
-    font-size: 4rem;
-  }
-
-  .countdown__el {
-    min-width: 12.5rem;
-  }
-
-  .countdown {
-    gap: 2rem;
+  .tick-group {
+    font-size: 6rem;
   }
 }
 
@@ -141,16 +129,7 @@ body {
     padding: 0 4rem;
   }
 
-  .time {
-    font-size: 3rem;
-    padding: 2rem 0;
-  }
-
-  .countdown {
-    gap: 1rem;
-  }
-
-  .countdown__el {
-    min-width: 10rem;
+  .tick-group {
+    font-size: 4rem;
   }
 }

@@ -83,7 +83,7 @@ body {
   gap: 5rem;
   background-image: url(./images/pattern-hills.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .social__icon:hover {
